@@ -1,0 +1,384 @@
+<!--Bagian Azka-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mesozoikum | Education</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"> 
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="Assets/Favicon.ico" type="image/x-icon">
+
+
+</head>
+  <body> 
+    
+   
+    <!--CSS Internal-->
+
+     <style>
+    :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #34495e;
+    }
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        
+    }
+
+    .footer {
+      width: 100%;
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center; 
+    }
+
+
+    .custom-link {
+        text-decoration: none; /* Menghapus garis bawah */
+        color: #ffffff; 
+    }
+
+    .custom-link:hover {
+        color: #ffffff; /* Warna saat link di-hover (opsional, bisa disesuaikan) */
+    }
+
+    .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.897)), url('https://wallpapercave.com/wp/wp6350029.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        height: 100vh;
+        margin-bottom: 30px;
+    }
+
+    .navbar {
+        background-color: var(--primary-color) !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .period-card {
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .period-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    }
+
+    .gallery-item {
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .gallery-item:hover {
+        transform: scale(1.03);
+    }
+
+    .fact-box {
+        background-color: #f8f9fa;
+        border-left: 4px solid #2ecc71;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+
+    .timeline {
+        position: relative;
+        padding: 20px 0;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        background: var(--primary-color);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -1px;
+    }
+
+    .timeline-item {
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    .fossil-card {
+        border: none;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .fossil-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .section-title {
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+    }
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: var(--primary-color);
+    }
+
+    #map-container {
+        height: 400px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .custom-button {
+        width: 150px; 
+    }  
+
+    .dropdown-menu {
+        right: 0; 
+        left: auto; 
+    }
+
+
+    .nav-item {
+        margin-right: 10px;
+    }
+
+     </style>
+
+</head>
+<body>
+
+
+<!-- Enhanced Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#home">
+            <img src="Assets/Jurrasic Park.png" alt="Logo" width="290px" height="62px" class="d-inline-block align-text-top me-2">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#periods">Periode</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#fossils">Fosil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#map">Map</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        More
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end"> <!-- Tambahkan dropdown-menu-end -->
+                        <li><a class="dropdown-item" href="index2.html">Fakta Menarik</a></li>
+                        <li><a class="dropdown-item" href="index3.html">Galeri</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero-section text-center" id="home">
+    <div class="container d-flex flex-column justify-content-center h-100">
+        <h1 class="display-3 animate_animated animate_fadeIn">Zaman Mesozoikum</h1>
+        <p class="lead animate_animated animatefadeIn animate_delay-1s">
+            Jelajahi Era Keemasan Dinosaurus (252-66 Juta Tahun yang Lalu) <br> 
+        
+        </p>
+        <a href="#explore" class="btn btn-light btn-lg mt-4 animate_animated animatefadeIn animate_delay-2s mx-auto" style="width: 250px;">
+            Ayoo Eksplorasi!
+        </a>
+    </div>
+</div>
+
+
+<!-- Main Content -->
+<div class="container">
+    <!-- Introduction Section -->
+    <section id="explore" class="mb-5">
+        <h2 class="section-title">Pengenalan Era Mesozoikum</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <p class="lead">
+                    Era Mesozoikum adalah salah satu periode paling menakjubkan dalam sejarah Bumi, 
+                    ditandai dengan dominasi reptil besar yang kita kenal sebagai dinosaurus.
+                </p>
+                <div class="fact-box">
+                    <h4>Tahukah Anda?</h4>
+                    <p>Kata "Mesozoikum" berasal dari bahasa Yunani yang berarti "kehidupan menengah", 
+                    menandai periode transisi penting dalam evolusi kehidupan di Bumi.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="https://2.bp.blogspot.com/-DK8t7hQZ-mU/W-KZm6wxXiI/AAAAAAAAEgg/dUct9o6YCGo6ywt0rEPpe7mgs6FdwezNgCLcBGAs/s1600/Pengertian%2BZaman%2BMesozoikum.jpg" class="img-fluid rounded"  alt="Mesozoikum">
+            </div>
+        </div>
+    </section>
+
+
+  <!--Periods-->
+    <section id="periods" class="mb-5">
+        <h2 class="section-title">Periode Utama</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card period-card">
+                    <img src="Assets/Triasic.jpg" class="card-img-top" alt="Triasik">
+                    <div class="card-body">
+                        <h3 class="card-title">Triasik</h3>
+                        <p class="card-text">251-201 juta tahun yang lalu</p>
+                        <ul class="list-unstyled">
+                            <li>✓ Munculnya dinosaurus pertama</li>
+                            <li>✓ Pembentukan Pangaea</li>
+                            <li>✓ Iklim panas dan kering</li>
+                        </ul>
+                        <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Selengkapnya tentang Triasik" data-bs-content="Era Triasik (251–201 juta tahun lalu) adalah periode pertama Mesozoikum, setelah kepunahan massal Permian. Iklim hangat dan kering, dengan Pangaea sebagai benua besar. Flora didominasi tumbuhan konifer, sedangkan fauna mencakup reptil awal, ikan, dan amfibi. Triasik juga menjadi tempat munculnya dinosaurus dan merupakan periode penting untuk evolusi mamalia serta burung.">Pelajari Lebih Lanjut</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card period-card">
+                    <img src="Assets/Jura.jpg" class="card-img-top" alt="Jurasik">
+                    <div class="card-body">
+                        <h3 class="card-title">Jurasik</h3>
+                        <p class="card-text">201-145 juta tahun yang lalu</p>
+                        <ul class="list-unstyled">
+                            <li>✓ Era keemasan dinosaurus</li>
+                            <li>✓ Munculnya burung pertama</li>
+                            <li>✓ Iklim hangat dan lembab</li>
+                        </ul>
+                        <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Selengkapnya tentang Jurasik" data-bs-content="Periode Jura (201–145 juta tahun lalu) adalah fase kedua Mesozoikum, setelah Triasik. Pada periode ini, Pangaea mulai terpisah, menciptakan iklim yang lebih hangat dan lembab. Dinosaurus mendominasi daratan, termasuk spesies besar seperti Brachiosaurus. Flora didominasi oleh konifer dan mulai muncul tumbuhan berbunga. Jura menandai perkembangan keanekaragaman hayati yang signifikan, termasuk hewan laut seperti plesiosaurus.">Pelajari Lebih Lanjut</a>
+                    </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card period-card">
+                    <img src="Assets/Kretaseus.jpg" class="card-img-top" alt="Kretaseus">
+                    <div class="card-body">
+                        <h3 class="card-title">Kretaseus</h3>
+                        <p class="card-text">145-66 juta tahun yang lalu</p>
+                        <ul class="list-unstyled">
+                            <li>✓ T-Rex dan Triceratops</li>
+                            <li>✓ Tumbuhan berbunga pertama</li>
+                            <li>✓ Kepunahan massal</li>
+                        </ul>
+                        <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Selengkapnya tentang Kretasius" data-bs-content="Periode Kreta (145–66 juta tahun lalu) adalah fase terakhir Mesozoikum. Pada periode ini, benua-benua terpisah lebih jauh, menciptakan ekosistem yang beragam. Iklim hangat dan lembab mendukung tumbuhan berbunga. Dinosaurus seperti Tyrannosaurus rex dan Triceratops mendominasi daratan, sementara hewan laut seperti ammonit dan mosasaurs berkembang. Kreta berakhir dengan kepunahan massal yang mengakibatkan punahnya banyak spesies, termasuk semua dinosaurus non-avian.">Pelajari Lebih Lanjut</a>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fossils Section -->
+    <section id="fossils" class="mb-5">
+        <h2 class="section-title">Penemuan Fosil</h2>
+        <div class="kehidupan">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="fossil-card card mb-4">
+                        <img src="Assets/Sue The T-Rex.jpg" class="card-img-top" alt="Fosil T-Rex">
+                        <div class="card-body">
+                            <h4>Sue the T-Rex</h4>
+                            <p class="text-muted">Ditemukan tahun 1990 di South Dakota, USA</p>
+                            <p>Sue adalah fosil Tyrannosaurus rex terbesar dan terlengkap, ditemukan pada tahun 1990 oleh Sue Hendrickson di South Dakota. Setelah sengketa hukum, fosil ini dibeli oleh The Field Museum di Chicago pada 1997 seharga $8,36 juta. Sue kini menjadi pameran utama, memberi wawasan penting tentang T. rex dan paleontologi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Selection -->
+        <section id="map" class="mb-5">
+            <h2 class="section-title">Map</h2>  
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fossil-card card mb-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3881112.1097679515!2d-106.36668453293025!3d39.09756382690307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874014749b1856b7%3A0xc75483314990a7ff!2sColorado%2C%20USA!5e0!3m2!1sen!2sid!4v1730727675662!5m2!1sen!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="card-body">
+                            <h4>Bone Wars</h4>
+                            <p class="text-muted">Diidentifikasi pada tahun 1877 di kota Morrison, Amerika Serikat</p>
+                            <p>Lokasi penemuan dinosaurus paling populer adalah <b>Formasi Morrison</b> di Amerika Serikat. Formasi ini mencakup wilayah di negara bagian seperti Colorado, Wyoming, Montana, dan Utah. Di sini, banyak fosil dari periode Jura ditemukan, termasuk spesies ikonik seperti <b>Stegosaurus</b>, <b>Allosaurus</b>, dan <b>Apatosaurus</b>. Formasi Morrison terkenal karena kelimpahan fosilnya, menjadikannya salah satu situs paleontologi paling penting di dunia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        
+        <footer class="bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Tentang</h5>
+                        <p>Website edukasi tentang era Mesozoikum dan kehidupan dinosaurus.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#home" class="text-white">Beranda</a></li>
+                            <li><a href="index3.html" class="text-white">Galeri</a></li>
+                            <li><a href="index2.html" class="text-white">Fakta Menarik</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                            <h5>Kontak</h5>
+                            <p> 
+                                
+                                Email: kelompok@mesozoikum.xirpl <br>
+                                <a  href="https://www.instagram.com/smkn1tanjungpandan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="custom-link" target="_blank">Ig : SMK</a><br>
+                                <a  href="https://www.instagram.com/xirplsknsa_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="custom-link" target="_blank">Ig : XI RPL</a>
+
+                            </p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+        const popover = new bootstrap.Popover('.popover-dismiss', {trigger: 'focus'})
+                    
+    </script>
+</body>
+</html>
